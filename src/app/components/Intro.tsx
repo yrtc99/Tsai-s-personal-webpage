@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import Bgcircle from './Bgcircle'
@@ -25,7 +24,7 @@ export default function Intro({}: Props) {
 
             <img 
             className='relative rounded-full h-32 w-32 mx-auto object-cover'
-            src='../img/jam.jpg'/>
+            src='https://miro.medium.com/max/5000/1*FHL0L21nragfsp35RCTgsQ.png'/>
 
             <div className=''>
                 <h2 className='text-sm uppercase pb-2 tracking-[14px]'>

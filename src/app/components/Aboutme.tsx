@@ -1,4 +1,4 @@
-"use client"
+
 import React from 'react'
 import {motion} from "framer-motion"
 import pfpic from "./img/pfpic.jpg"
@@ -21,7 +21,7 @@ export default function Aboutme({}:Props) {
         }}
         whileInView={{ opacity: 1, x: 0}}
         viewport= {{once: true}}
-        src="./img/pfpic.jpg"
+        src="https://miro.medium.com/max/5000/1*FHL0L21nragfsp35RCTgsQ.png"
         className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] x;:h-[600px]'
         />
         <div className='space-y-10 px-0 md:px-10'>
