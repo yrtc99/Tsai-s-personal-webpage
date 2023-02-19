@@ -1,14 +1,18 @@
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import Bgcircle from './Bgcircle'
+import { PageInfo } from 'typings'
+import { urlFor } from 'sanity'
 
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo
+}
 
-export default function Intro({ }: Props) {
+export default function Intro({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
-            "hi, I'm Zoe :D",
+            `hi, I'm ${pageInfo?.name} :D`,
             "I'm a beginer learner",
             "Glad to meet you here",
         ],
@@ -24,11 +28,12 @@ export default function Intro({ }: Props) {
 
             <img
                 className='relative rounded-full h-32 w-32 mx-auto object-cover'
-                src='https://miro.medium.com/max/5000/1*FHL0L21nragfsp35RCTgsQ.png' />
+                src={pageInfo?.introImage && urlFor(pageInfo.introImage).url()}
+            />
 
             <div className=''>
                 <h2 className='text-sm uppercase pb-2 tracking-[14px]'>
-                    software engineer
+                    {pageInfo?.role}
                 </h2>
                 <h1 className='text-4xl lg:text-6xl font-semibold scroll-px-10'>
                     <span>{text}</span>

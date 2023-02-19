@@ -1,15 +1,18 @@
-import React from 'react'
+
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
+import { Social } from 'typings';
 
 
 
+//this page will get a social arry
+type Props = {
+  socials: Social[];
+}
 
-type Props = {}
-
-export default function Header({ }: Props) {
+export default function Header({ socials }: Props) {
   return (
-    <header className='sticky top-0 p-5 flex items-start justify-between max-w-6xl mx-auto xl:items-center'>
+    <div className='sticky top-0 p-5 flex items-start justify-between max-w-6xl mx-auto xl:items-center'>
 
       <motion.div
         initial={{
@@ -28,23 +31,15 @@ export default function Header({ }: Props) {
         className='flex flex-row items-center'
       >
         {/*social icon*/}
+        {socials?.map((social) => (
+          <SocialIcon
+          key={social._id}
+          url={social.url}
+          fgColor='gray'
+          bgColor='transparent'
+          />
+        ))}
 
-
-        <SocialIcon
-          url="https://linkedin.com/in/yrtsai"
-          fgColor='gray'
-          bgColor='transparent'
-        />
-        <SocialIcon
-          url="https://linkedin.com/in/yrtsai"
-          fgColor='gray'
-          bgColor='transparent'
-        />
-        <SocialIcon
-          url="https://linkedin.com/in/yrtsai"
-          fgColor='gray'
-          bgColor='transparent'
-        />
       </motion.div>
 
 
@@ -76,7 +71,7 @@ export default function Header({ }: Props) {
         </a>
       </motion.div>
 
-    </header>
+    </div>
 
   )
 }
