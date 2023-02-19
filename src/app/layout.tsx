@@ -6,7 +6,8 @@ import Aboutme from './components/Aboutme'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
-import ContectMe from './ContectMe'
+import ContectMe from './components/ContactMe'
+
 
 export default function RootLayout({
   children,
@@ -14,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='bg-[rgb(36,36,36)] text-white' h-screen snap-y snap-mandatory overflow-scroll z-0>
+    <html lang="en" className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#fe21d2]/80' >
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
@@ -51,7 +52,7 @@ export default function RootLayout({
       </section>
 
       {/*contact me */}
-      <section id="contectme" className='snap-start'>
+      <section id="contactme" className='snap-start'>
         <ContectMe/>
       </section>
 

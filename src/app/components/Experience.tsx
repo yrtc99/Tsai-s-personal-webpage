@@ -11,7 +11,7 @@ export default function Experience({}:Props) {
             Experience
         </h3>
 
-        <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mendatory'>
+        <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mendatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#fe21d2]/80'>
             <ExperienceCard/>
             <ExperienceCard/>
             <ExperienceCard/>
