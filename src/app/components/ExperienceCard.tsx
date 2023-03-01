@@ -4,12 +4,12 @@ import { Experience } from 'typings'
 import { urlFor } from 'sanity'
 
 
-type Props = {
 
-    experience: Experience[]
+type Props = {
+    experience: Experience;
 }
 
-const ExperienceCard = (experience: Props) => {
+const ExperienceCard = ({ experience }: Props) => {
     return (
 
         <article className='flex flex-col rounded-lg items-center space-y-4 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#461739] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
@@ -40,7 +40,7 @@ const ExperienceCard = (experience: Props) => {
 
                 </div>
                 <p className='uppercase py-5 text-gray-300'>
-                    {new Date(experience.dateStarted).toDateString} - {""}
+                    {new Date(experience.dateStarted).toDateString()} - {""}
                     {experience.isCurrentlyWorkingHere
                         ? "Present"
                         : new Date(experience.dateEnded).toDateString()

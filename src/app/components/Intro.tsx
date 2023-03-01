@@ -5,6 +5,8 @@ import { PageInfo } from 'typings'
 import { urlFor } from 'sanity'
 
 
+//
+
 type Props = {
     pageInfo: PageInfo
 }
@@ -12,7 +14,7 @@ type Props = {
 export default function Intro({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
-            `hi, I'm ${pageInfo?.name} :D`,
+            `hi, I'm Zoe`,
             "I'm a beginer learner",
             "Glad to meet you here",
         ],
@@ -29,10 +31,11 @@ export default function Intro({ pageInfo }: Props) {
             <img
                 className='relative rounded-full h-32 w-32 mx-auto object-cover'
                 src={pageInfo?.introImage && urlFor(pageInfo.introImage).url()}
+               
             />
 
             <div className=''>
-                <h2 className='text-sm uppercase pb-2 tracking-[14px]'>
+                <h2 className='text-sm uppercase pb-2 tracking-[14px]' >
                     {pageInfo?.role}
                 </h2>
                 <h1 className='text-4xl lg:text-6xl font-semibold scroll-px-10'>

@@ -1,7 +1,8 @@
-
+import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import { Social } from 'typings';
+import { NoSSR } from './NoSSR';
 
 
 
@@ -12,6 +13,7 @@ type Props = {
 
 export default function Header({ socials }: Props) {
   return (
+
     <div className='sticky top-0 p-5 flex items-start justify-between max-w-6xl mx-auto xl:items-center'>
 
       <motion.div
@@ -33,10 +35,10 @@ export default function Header({ socials }: Props) {
         {/*social icon*/}
         {socials?.map((social) => (
           <SocialIcon
-          key={social._id}
-          url={social.url}
-          fgColor='gray'
-          bgColor='transparent'
+            key={social._id}
+            url={social.url}
+            fgColor='gray'
+            bgColor='transparent'
           />
         ))}
 
@@ -59,16 +61,18 @@ export default function Header({ socials }: Props) {
         }}
         className='flex flex-row items-center text-gray-300 cursor-pointer'
       >
-        <a href='#contactme'>
-          <SocialIcon
-            network='email'
-            fgColor='gray'
-            bgColor='transparent'
-          />
-          <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>
-            get in touch
-          </p>
-        </a>
+        <div>
+          <a href='#contactme'>
+            <SocialIcon
+              network='email'
+              fgColor='gray'
+              bgColor='transparent'
+            />
+            <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>
+              get in touch
+            </p>
+          </a>
+        </div>
       </motion.div>
 
     </div>

@@ -24,6 +24,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "zoetsaiprofolioweb/schemas/index.js", "zoetsaiprofolioweb/schemas/experience.js", "zoetsaiprofolioweb/schemas/pageInfo.js", "zoetsaiprofolioweb/schemas/project.js", "zoetsaiprofolioweb/schemas/social.js", "zoetsaiprofolioweb/schemas/skill.js"],
   "exclude": ["node_modules"]
 }

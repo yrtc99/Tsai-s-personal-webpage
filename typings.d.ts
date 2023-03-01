@@ -18,7 +18,7 @@ export interface Image extends SanityBody {
 export interface PageInfo extends SanityBody {
     _type:'pageInfo';
     address: string;
-    backgroundInformation: string;
+    aboutMeInformation: string;
     email: string;
     role: string;
     introImage: Image;
@@ -30,6 +30,7 @@ export interface PageInfo extends SanityBody {
 
 export interface Experience extends SanityBody {
     _type:'experience';
+    children: React.ReactNode
     companyImage: Image;
     company: string;
     dateStarted: date;
@@ -37,6 +38,7 @@ export interface Experience extends SanityBody {
     isCurrentlyWorkingHere: boolean;
     points:string[];
     technologies: Technology[];
+    
 }
 
 export interface Project extends SanityBody {
