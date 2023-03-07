@@ -3,7 +3,7 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import Bgcircle from './Bgcircle'
 import { PageInfo } from 'typings'
 import { urlFor } from 'sanity'
-
+import intropic from '../imgs/avatar.png'
 
 //
 
@@ -28,15 +28,17 @@ export default function Intro({ pageInfo }: Props) {
         <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
             <Bgcircle />
 
+            
             <img
                 className='relative rounded-full h-32 w-32 mx-auto object-cover'
-                src={pageInfo?.introImage && urlFor(pageInfo.introImage).url()}
+                src='https://img.onl/o1uUMQ'
+                alt='avatar'
                
             />
 
             <div className=''>
                 <h2 className='text-sm uppercase pb-2 tracking-[14px]' >
-                    {pageInfo?.role}
+                    Software Engineer
                 </h2>
                 <h1 className='text-4xl lg:text-6xl font-semibold scroll-px-10'>
                     <span>{text}</span>

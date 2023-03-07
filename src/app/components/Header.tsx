@@ -33,14 +33,22 @@ export default function Header({ socials }: Props) {
         className='flex flex-row items-center'
       >
         {/*social icon*/}
-        {socials?.map((social) => (
-          <SocialIcon
-            key={social._id}
-            url={social.url}
-            fgColor='gray'
-            bgColor='transparent'
-          />
-        ))}
+        <SocialIcon
+          className='cursor-pointer'
+          network='linkedin'
+          fgColor='gray'
+          bgColor='transparent'
+          url='https://linkedin.com/in/yrtsai'
+          target="_blank"
+        />
+        <SocialIcon
+          className='cursor-pointer '
+          network='github'
+          fgColor='gray'
+          bgColor='transparent'
+          url='https://github.com/yrtc99'
+          target="_blank"
+        />
 
       </motion.div>
 

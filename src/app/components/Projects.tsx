@@ -2,12 +2,13 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { Project } from 'typings';
 import { urlFor } from 'sanity';
+import Image from 'next/image'
+import Case1_swap from './cases/Case1_Swap';
+import Case2_web from './cases/Case2_Web';
 
-type Props = {
-    projects: Project[];
-}
 
-function Projects({projects}: Props) {
+
+function Projects() {
     
   return (
     <motion.div 
@@ -20,44 +21,11 @@ function Projects({projects}: Props) {
         </h3>
 
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#fe21d2]/80'>
-            {projects?.map((project, i) => (
-                <div 
-                key={project._id}
-                className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'
-                >
-                    
-                    <motion.img 
-                    initial={{ y:-300, opacity:0 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.2 }}
-                    viewport={{ once: true }}
-                    className='w-40 h-40 xl:w-[200px] xl:h-[200px] object-cover object-center'
-                    src={urlFor(project?.image).url()}
-                    />
-                    <div className='space-y-10 md:px-10 max-w-6xl'>
-                        <h4 className='text-4xl font-semibold text-center'>
-                            <span className='underline decoration-[#fe21d2]/50'>
-                                Case Study {i+1} of {projects.length}: 
-                            </span>{" "}
-                            {project?.title}
-                        </h4>
-
-                        <div className='flex items-center space-x-2 justify-center'>
-                            {project.technologies.map((technology) => (
-                                <img
-                                    className='h-10 w-10'
-                                    key={technology._id}
-                                    src={urlFor(technology.image).url()}
-                                />
-                            ))}
-                        </div>
-
-                        <p className='text-lg text-center md:text-left'>
-                            {project.summary}
-                        </p>
-                    </div>    
-                </div>
-            ))}
+            <Case1_swap/>
+            <Case2_web/>
+                
+                
+            
         </div>
         <div className='w-full absolute top-[30%] bg-[#fe21d2]/10 left-0 h-[500px] -skew-y-12'/>
     </motion.div>
